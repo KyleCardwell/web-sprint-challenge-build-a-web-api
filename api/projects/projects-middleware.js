@@ -8,7 +8,7 @@ function logger(req, res, next) {
 
 function validateProjectId(req, res, next) {
 
-    Projects.get(req.params.id)
+    Projects.get(req.body.project_id || req.params.id)
 
         .then(project => {
             if(!project) {

@@ -21,4 +21,10 @@ server.use(helmet())
 server.use('/api/actions', actionsRoutes)
 server.use('/api/projects', projectsRoutes)
 
+server.use('*', (req, res) => {
+    res.json({
+        message: "this is cool!"
+    })
+})
+
 module.exports = server;

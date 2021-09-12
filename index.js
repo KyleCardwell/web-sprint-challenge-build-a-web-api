@@ -15,8 +15,8 @@ Pull your server into this file and start it!
 
 const server = require('./api/server.js')
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-    console.log(`server running on port ${PORT}`)
+server.listen(port, () => {
+    console.log(`server running on port ${port}`)
 })

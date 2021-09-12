@@ -47,12 +47,12 @@ router.delete('/:id', logger, validateActionId, (req, res, next) => {
 
 
 
-router.use((err, req, res) => {
-    res.status(err.status || 500).json({
-        custom: "something super bad happened",
-        message: err.message,
-        stack: err.stack
-    })
-})
+// router.use((err, req, res) => {
+//     res.status(err.status || 500).json({
+//         custom: "something super bad happened",
+//         message: err.message,
+//         stack: err.stack
+//     })
+// })
 
 module.exports = router;

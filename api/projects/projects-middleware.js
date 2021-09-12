@@ -24,8 +24,9 @@ function validateProjectId(req, res, next) {
 }
 
 function validateProject(req, res, next) {
-    if(!req.body.name || !req.body.description) {
-        res.status(400).json({message: "project missing name or description"})
+
+    if(!req.body.name || !req.body.description || !Object.keys(req.body).includes('completed')) {
+        res.status(400).json({message: "project missing name, description, or completed"})
     } else {
         next()
     }

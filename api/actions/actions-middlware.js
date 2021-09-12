@@ -19,7 +19,7 @@ function validateActionId(req, res, next) {
             }
         })
         .catch(() => {
-            res.status(500).json({ message: "error getting user"})
+            res.status(400).json({ message: "error getting user"})
         })
 }
 
